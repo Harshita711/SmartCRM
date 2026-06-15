@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: xeno-crm-backend
+    name: smartcrm-backend
     runtime: node
     rootDir: backend
     buildCommand: npm install
@@ -27,7 +27,7 @@ services:
         sync: false
 
   - type: web
-    name: xeno-channel-service
+    name: channel-service
     runtime: node
     rootDir: channel-service
     buildCommand: npm install
