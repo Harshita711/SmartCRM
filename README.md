@@ -1,4 +1,4 @@
-# Xeno AI-Native Mini CRM
+# SmartCRM - AI-Native Mini CRM
 
 > A production-grade, AI-powered CRM for shopper engagement — built for the Xeno Engineering Internship Assignment.
 
