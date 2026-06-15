@@ -1,0 +1,27 @@
+{
+  "name": "xeno-channel-service",
+  "version": "1.0.0",
+  "description": "Simulated external messaging provider for SmartCRM",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^8.5.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

@@ -1,0 +1,17 @@
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+channel-service/node_modules/
+
+.env
+.env.*
+
+backend/.env
+frontend/.env
+channel-service/.env
+
+dist/
+build/
+coverage/
+*.log
+.vscode/

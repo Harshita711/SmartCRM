@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: xeno-crm-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CHANNEL_SERVICE_URL
+        sync: false
+      - key: CHANNEL_SERVICE_API_KEY
+        sync: false
+      - key: CRM_BASE_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+
+  - type: web
+    name: xeno-channel-service
+    runtime: node
+    rootDir: channel-service
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 6000
+      - key: MONGO_URI
+        sync: false
+      - key: CHANNEL_SERVICE_API_KEY
+        sync: false
+      - key: CRM_BASE_URL
+        sync: false
