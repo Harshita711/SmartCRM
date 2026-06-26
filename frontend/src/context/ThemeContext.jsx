@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 const ThemeContext = createContext(null);
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => localStorage.getItem('xeno_theme') || 'light');
+  const [theme, setTheme] = useState(() => localStorage.getItem('smartcrm_theme') || 'light');
 
   useEffect(() => {
     const root = document.documentElement;
@@ -12,7 +12,7 @@ export const ThemeProvider = ({ children }) => {
     } else {
       root.classList.remove('dark');
     }
-    localStorage.setItem('xeno_theme', theme);
+    localStorage.setItem('smartcrm_theme', theme);
   }, [theme]);
 
   const toggleTheme = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));

@@ -5,13 +5,13 @@ const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
-    const stored = localStorage.getItem('xeno_user');
+    const stored = localStorage.getItem('smartcrm_user');
     return stored ? JSON.parse(stored) : null;
   });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem('xeno_token');
+    const token = localStorage.getItem('smartcrm_token');
     if (!token) {
       setLoading(false);
       return;
@@ -21,19 +21,19 @@ export const AuthProvider = ({ children }) => {
       .me()
       .then(({ data }) => {
         setUser(data.user);
-        localStorage.setItem('xeno_user', JSON.stringify(data.user));
+        localStorage.setItem('smartcrm_user', JSON.stringify(data.user));
       })
       .catch(() => {
-        localStorage.removeItem('xeno_token');
-        localStorage.removeItem('xeno_user');
+        localStorage.removeItem('smartcrm_token');
+        localStorage.removeItem('smartcrm_user');
         setUser(null);
       })
       .finally(() => setLoading(false));
   }, []);
 
   const persistSession = (token, userData) => {
-    localStorage.setItem('xeno_token', token);
-    localStorage.setItem('xeno_user', JSON.stringify(userData));
+    localStorage.setItem('smartcrm_token', token);
+    localStorage.setItem('smartcrm_user', JSON.stringify(userData));
     setUser(userData);
   };
 
@@ -56,8 +56,8 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const logout = useCallback(() => {
-    localStorage.removeItem('xeno_token');
-    localStorage.removeItem('xeno_user');
+    localStorage.removeItem('smartcrm_token');
+    localStorage.removeItem('smartcrm_user');
     setUser(null);
   }, []);
 

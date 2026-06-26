@@ -14,11 +14,11 @@ app.use(express.json({ limit: '1mb' }));
 app.use(morgan('dev', { stream: { write: (msg) => logger.info(msg.trim()) } }));
 
 app.get('/health', (req, res) => {
-  res.json({ success: true, service: 'xeno-channel-service', status: 'ok', timestamp: new Date().toISOString() });
+  res.json({ success: true, service: 'smartcrm-channel-service', status: 'ok', timestamp: new Date().toISOString() });
 });
 
 app.get('/', (req, res) => {
-  res.json({ success: true, message: 'Xeno Channel Service - simulated messaging provider', version: '1.0.0' });
+  res.json({ success: true, message: 'SmartCRM Channel Service - simulated messaging provider', version: '1.0.0' });
 });
 
 app.use('/', channelRoutes);
@@ -31,7 +31,7 @@ const PORT = process.env.PORT || 6000;
 const start = async () => {
   await connectDB();
   app.listen(PORT, () => {
-    logger.info(`Xeno Channel Service running on port ${PORT} [${process.env.NODE_ENV || 'development'}]`);
+    logger.info(`SmartCRM Channel Service running on port ${PORT} [${process.env.NODE_ENV || 'development'}]`);
   });
 };
 

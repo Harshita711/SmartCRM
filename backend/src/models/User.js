@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema(
     },
     company: {
       type: String,
-      default: 'Xeno Demo Brand',
+      default: 'SmartCRM Demo Brand',
     },
   },
   { timestamps: true }

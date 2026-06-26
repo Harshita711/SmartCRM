@@ -13,7 +13,7 @@ MongoDB Atlas. All collections use Mongoose with schema validation.
 | email | String | required, unique, lowercase |
 | password | String | bcrypt hashed, select: false |
 | role | String | admin \| manager \| viewer |
-| company | String | default: "Xeno Demo Brand" |
+| company | String | default: "SmartCRM Demo Brand" |
 | createdAt | Date | |
 | updatedAt | Date | |
 

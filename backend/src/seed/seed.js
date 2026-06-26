@@ -99,16 +99,16 @@ const seed = async () => {
   ]);
 
   // --- Demo user ---------------------------------------------------------
-  const existingUser = await User.findOne({ email: 'demo@xeno.com' });
+  const existingUser = await User.findOne({ email: 'demo@smartcrm.com' });
   if (!existingUser) {
     await User.create({
       name: 'Demo Admin',
-      email: 'demo@xeno.com',
+      email: 'demo@smartcrm.com',
       password: 'demo1234',
       role: 'admin',
-      company: 'Xeno Demo Brand',
+      company: 'SmartCRM Demo Brand',
     });
-    logger.info('Created demo user: demo@xeno.com / demo1234');
+    logger.info('Created demo user: demo@smartcrm.com / demo1234');
   }
 
   // --- Customers -----------------------------------------------------------
@@ -244,7 +244,7 @@ const seed = async () => {
   // These are the saved "Segment" documents used by the Audience Segmentation
   // and Campaign Creation pages (the "Audience Segment" dropdown reads from
   // this collection). Without these, the campaign creation dropdown is empty.
-  const demoUserForSegments = await User.findOne({ email: 'demo@xeno.com' });
+  const demoUserForSegments = await User.findOne({ email: 'demo@smartcrm.com' });
 
   const segmentDefs = [
     {

@@ -152,7 +152,7 @@ const AICopilotSidebar = () => {
     setMessages((prev) => [...prev, { role: 'assistant', content: '', timestamp: new Date().toISOString(), streaming: true }]);
 
     try {
-      const token = localStorage.getItem('xeno_token');
+      const token = localStorage.getItem('smartcrm_token');
       const controller = new AbortController();
       abortRef.current = controller;
 

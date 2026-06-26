@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "xeno-crm-frontend",
+  "name": "smartcrm-frontend",
   "builds": [
     {
       "src": "package.json",

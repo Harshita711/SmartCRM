@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext.jsx';
 const Login = () => {
   const { login, demoLogin } = useAuth();
   const navigate = useNavigate();
-  const [email, setEmail] = useState('demo@xeno.com');
+  const [email, setEmail] = useState('demo@smartcrm.com');
   const [password, setPassword] = useState('demo1234');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -114,7 +114,7 @@ const Login = () => {
         </div>
 
         <p className="text-center text-xs text-gray-500 mt-6">
-          Built for the Xeno Engineering Internship Assignment · Gemini-powered AI Marketing
+          
         </p>
       </div>
     </div>

@@ -11,7 +11,7 @@
 | Channel Service | Deploy to Render (see below) |
 | Database | MongoDB Atlas |
 
-**Demo credentials:** `demo@xeno.com` / `demo1234`
+**Demo credentials:** `demo@smartcrm.com` / `demo1234`
 
 ---
 
@@ -168,7 +168,7 @@ cd backend && npm run seed
 ```
 
 This creates:
-- 1 demo user: `demo@xeno.com` / `demo1234`
+- 1 demo user: `demo@smartcrm.com` / `demo1234`
 - 500 customers across 10 Indian cities, 4 product categories
 - 1500 orders with realistic spending patterns
 - Customer segments auto-computed (New, Active, Loyal, Premium, At Risk, Inactive, Churned)

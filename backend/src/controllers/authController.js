@@ -60,7 +60,7 @@ export const getMe = asyncHandler(async (req, res) => {
 // @route   POST /api/auth/demo
 // @access  Public
 export const demoLogin = asyncHandler(async (req, res) => {
-  const demoEmail = 'demo@xeno.com';
+  const demoEmail = 'demo@smartcrm.com';
   let user = await User.findOne({ email: demoEmail });
 
   if (!user) {
@@ -69,7 +69,7 @@ export const demoLogin = asyncHandler(async (req, res) => {
       email: demoEmail,
       password: 'demo1234',
       role: 'admin',
-      company: 'Xeno Demo Brand',
+      company: 'SmartCRM Demo Brand',
     });
   }
 

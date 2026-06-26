@@ -1,5 +1,5 @@
 {
-  "name": "xeno-channel-service",
+  "name": "smartcrm-channel-service",
   "version": "1.0.0",
   "description": "Simulated external messaging provider for SmartCRM",
   "type": "module",

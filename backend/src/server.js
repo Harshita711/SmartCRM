@@ -35,11 +35,11 @@ app.use(
 
 // --- Health check ----------------------------------------------------------
 app.get('/health', (req, res) => {
-  res.json({ success: true, service: 'xeno-crm-backend', status: 'ok', timestamp: new Date().toISOString() });
+  res.json({ success: true, service: 'smartcrm-backend', status: 'ok', timestamp: new Date().toISOString() });
 });
 
 app.get('/', (req, res) => {
-  res.json({ success: true, message: 'Xeno AI-Native CRM API', version: '1.0.0' });
+  res.json({ success: true, message: 'SmartCRM AI-Native CRM API', version: '1.0.0' });
 });
 
 // --- API routes -------------------------------------------------------------

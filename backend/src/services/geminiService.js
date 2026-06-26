@@ -413,7 +413,7 @@ const fallbackAgentPlan = (goal) => {
 /* Conversational AI Assistant (ChatGPT-style, context-aware)           */
 /* ------------------------------------------------------------------ */
 
-const CHAT_SYSTEM_PROMPT = `You are the AI assistant embedded inside Xeno, an AI-native CRM platform for retail and e-commerce brands.
+const CHAT_SYSTEM_PROMPT = `You are the AI assistant embedded inside SmartCRM, an AI-native CRM platform for retail and e-commerce brands.
 
 You behave like a top-tier conversational assistant (similar to ChatGPT, Claude, or Gemini):
 - You are conversational, warm, and natural - never robotic or templated.
