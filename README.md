@@ -1,6 +1,6 @@
 # SmartCRM - AI-Native Mini CRM
 
-> A production-grade, AI-powered CRM for shopper engagement — built for the Xeno Engineering Internship Assignment.
+> A production-grade, AI-powered CRM for shopper engagement.
 
 ## Live Demo
 
@@ -47,7 +47,7 @@
 ## Project Structure
 
 ```
-xeno-crm/
+smartcrm/
 ├── backend/               # CRM REST API (Node.js / Express)
 │   ├── src/
 │   │   ├── config/        # DB + logger
@@ -120,7 +120,7 @@ xeno-crm/
 
 ```bash
 git clone <repo-url>
-cd xeno-crm
+cd smartcrm
 
 # Backend
 cd backend && npm install && cd ..
@@ -277,6 +277,4 @@ All AI features have graceful fallbacks — they work with heuristics when the G
 
 ---
 
-## License
 
-MIT — built for the Xeno Engineering Internship 2024.
